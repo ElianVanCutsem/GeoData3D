@@ -1,0 +1,32 @@
+﻿<Window x:Class="Project2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:h="http://helix-toolkit.org/wpf"
+        xmlns:local="clr-namespace:Project2"
+        mc:Ignorable="d"
+        Title="Elian's Project 2" Height="450" Width="800">
+
+    <Grid>
+        <Canvas Name="PaintSurface" Margin="0,40,0,0"/>
+        <h:HelixViewport3D x:Name="myViewport" />
+        <StackPanel Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Button Margin="0, 10" Name="CameraCenter" Padding="10" Click="CameraCenter_Click">
+            Recenter Camera
+        </Button>
+        <Label Margin="0,0,0,0">Epsilon:</Label>
+            <TextBox x:Name="Epsilon" Margin="0,0,0,10" Text="1.0"></TextBox>
+        <CheckBox x:Name="CheckBoxBelgium" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked">België</CheckBox>
+        <CheckBox x:Name="CheckBoxNetherlands" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked">Nederland</CheckBox>
+        <ComboBox Margin="0, 10" Name="dataCombo" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem IsSelected="True">Aantal gemeenten</ComboBoxItem>
+            <ComboBoxItem>Aantal inwoners</ComboBoxItem>
+        </ComboBox>
+         <Button Margin="0, 10" Name="StartButton" Padding="10" Click="StartButton_Click">
+            Change view
+        </Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>
